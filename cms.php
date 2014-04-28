@@ -120,6 +120,7 @@ if ($_SESSION['loggedin'] == "y") {
 		$fp = fopen($_POST['page'], 'w');
 		fwrite($fp, $html);
 		fclose($fp);
+		echo "<br>The page has been succesfully updated. <a href='index.php'>Go back</a>";
 	}
 }
 
