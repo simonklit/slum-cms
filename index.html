@@ -1,36 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Slum CMS : Slum CMS is a Simple, Unbulky, Lightweight, Minimalistic Content Management System, that runs in PHP and without any connection to a database." />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Slum CMS by simonklit</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Slum CMS</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Slum CMS</h1>
+        <p>Slum CMS is a Simple, Unbulky, Lightweight, Minimalistic Content Management System, that runs in PHP and without any connection to a database.</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/simonklit/Slum-CMS">View on GitHub</a>
+        <p class="view"><a href="https://github.com/simonklit/slum-cms">View the Project on GitHub <small>simonklit/slum-cms</small></a></p>
 
-          <h1 id="project_title">Slum CMS</h1>
-          <h2 id="project_tagline">Slum CMS is a Simple, Unbulky, Lightweight, Minimalistic Content Management System, that runs in PHP and without any connection to a database.</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/simonklit/Slum-CMS/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/simonklit/Slum-CMS/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+        <ul>
+          <li><a href="https://github.com/simonklit/slum-cms/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/simonklit/slum-cms/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/simonklit/slum-cms">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
         <h1>
 <a name="slum-cms" class="anchor" href="#slum-cms"><span class="octicon octicon-link"></span></a>Slum CMS</h1>
 
@@ -96,21 +93,36 @@
 
 <p><img src="http://i.imgur.com/57KTLHD.png" alt="Editing page"></p>
 
+<h2>
+<a name="external-libraries" class="anchor" href="#external-libraries"><span class="octicon octicon-link"></span></a>External Libraries</h2>
+
+<p>Slum CMS uses several external libraries, so as to function without reinventing the wheel.</p>
+
+<h3>
+<a name="php-libraries" class="anchor" href="#php-libraries"><span class="octicon octicon-link"></span></a>PHP Libraries</h3>
+
+<p><a href="http://simplehtmldom.sourceforge.net/">Simple HTML DOM Parser</a>, used for parsing the selected pages and finding elements that has the .slum class.</p>
+
+<p><a href="https://github.com/GerHobbelt/nicejson-php">NiceJSON-PHP</a>, used for outputting the JSON files in a pretty, readable format on older versions of PHP.</p>
+
+<p><a href="http://www.phpbuilder.com/snippet/detail.php?type=snippet&amp;id=1348">Tidier*</a>, used for outputting HTML in a pretty, readable format. (Does not have an official name, I just call it tidier in this project.)</p>
+
+<h3>
+<a name="javascript-libraries" class="anchor" href="#javascript-libraries"><span class="octicon octicon-link"></span></a>JavaScript Libraries</h3>
+
+<p><a href="http://www.nicedit.com">NicEdit</a>, is an easy to implement WYSIWYG-editor.</p>
+
 <h3>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
 <p>Use Slum CMS as you like, just do <strong>not</strong> redistribute or sell it to anyone. Link them here.</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Slum CMS maintained by <a href="https://github.com/simonklit">simonklit</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/simonklit">simonklit</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -121,7 +133,6 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
