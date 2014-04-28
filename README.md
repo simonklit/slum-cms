@@ -1,0 +1,48 @@
+#Slum CMS#
+####ver 0.1####
+Slum CMS is a Simple, Unbulky*, Lightweight, Minimalistic Content Management System, that runs in PHP and without any connection to a database.
+
+*: Unbulky is relative - configuration as of 0.1 might be a bit bulky.
+
+##Installation##
+
+ 1. Download the Slum CMS source, and place it in a folder anywhere on your server. Could be "slum" at the webroot, but that is optional.
+
+##Initial Configuration##
+ 1. Go to the db/users.json file, and change the username as you see please. The password in the md5-hash is "1234". As of current release, it is not possible to change user information, so you have to delete the user and create a new one, and then manually grant it "root" privileges (by adding "priv": "root"), if you want to change the password - which you do want to.
+ 2. Move the users.json file to a newly created directory, and rename it. Change the information accordingly in the "config.php" file. (This is **important** for security reasons)
+
+##Usage##
+
+In the HTML of the pages:
+
+ 1. Add the class "slum" to the elements on your pages that you want Slum CMS to edit.
+ 2. Add the attribute slumtitle="" if you want to add a title to the elements. This makes them easier to identify when changing them in Slum.
+ 3. *Optional:* Add textarea="plain", if you do not want this element to be rendered in a WYSIWYG editor. Recommended for elements like <title> and so.
+
+In Slum CMS:
+
+ 1. Log in as a user with root privileges to manage pages. Click "Manage Pages".
+ 2. Add the desired name of the page.
+ 3. In the path textfield, type in the path to the page you want to edit. This goes from the serverroot (webroot), of your server. So, if the page pizza.html is located in the folder Pages on the root of your server, it would be pages/pizza.html that you put in the path field.
+
+##Known Bugs##
+Slum does not notify you if a page has been succesfully updated, it simply leaves you with a blank bage and a "Go back" link. This will be fixed in the next update.
+
+##Configuring Slum##
+It is possible to change a lot of things in regards to Slum CMS, and that can be done in the config.php file. All of the possible configurations are commented, with descriptions of what it does, and what it can be changed to.
+
+##Uploading Images##
+Slum CMS does **not** upload images to the server it is located on. This is a planned feature. It is although possible to add images in the WYSIWYG editor, but they're uploaded to imgur, and not the server Slum is on.
+
+##Screenshots##
+###Dashboard for root user###
+![Dashboard for Root user][1]
+###Editing a page###
+![Editing page][2]
+
+###License###
+Use Slum CMS as you like, just do **not** redistribute or sell it to anyone. Link them here.
+
+[1]: http://i.imgur.com/95Iclptl.png
+[2]: http://i.imgur.com/57KTLHD.png
