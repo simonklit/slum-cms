@@ -22,8 +22,11 @@ Slum CMS is a Simple, Unbulky*, Lightweight, Minimalistic Content Management Sys
  1. Download the Slum CMS source, and place it in a folder anywhere on your server. Could be "slum" at the webroot, but that is optional.
 
 ##Initial Configuration##
- 1. Go to the db/users.json file, and change the username as you see please. The password in the md5-hash is "1234". As of current release, it is not possible to change user information, so you have to delete the user and create a new one, and then manually grant it "root" privileges (by adding "priv": "root"), if you want to change the password - which you do want to.
- 2. Move the users.json file to a newly created directory, and rename it. Change the information accordingly in the "config.php" file. (This is **important** for security reasons)
+ 1. Login by going (with your browser) to the directory in which you have placed Slum CMS, and using the following login information: Username: *rootuser* Password: *1234*.
+ 2. Click "Manage Users"
+ 3. Add a new user with the desired information
+ 4. Go to the db/users.json file, and add "priv": "root" to the newly created user. It is important that you add a comma after the password line. Make it look identical (except for actual username and password) to the entry above, the one with rootuser.
+ 5. Move the users.json file to a newly created directory, and rename it. Change the information accordingly in the "config.php" file. (This is **important** for security reasons)
 
 ##Usage##
 
@@ -31,7 +34,7 @@ In the HTML of the pages:
 
  1. Add the class "slum" to the elements on your pages that you want Slum CMS to edit.
  2. Add the attribute slumtitle="" if you want to add a title to the elements. This makes them easier to identify when changing them in Slum.
- 3. *Optional:* Add textarea="plain", if you do not want this element to be rendered in a WYSIWYG editor. Recommended for elements like <title> and so.
+ 3. *Optional:* Add textarea="plain", if you do not want this element to be rendered in a WYSIWYG editor. Recommended for elements like title and so.
 
 In Slum CMS:
 
