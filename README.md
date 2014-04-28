@@ -14,6 +14,7 @@ Slum CMS is a Simple, Unbulky*, Lightweight, Minimalistic Content Management Sys
 - [External Libraries](#external-libraries)
     - [PHP Libraries](#php-libraries)
     - [JavaScript Libraries](#javascript-libraries)
+    - [CSS Libraries](#css-libraries)
 - [License](#license)
 
 ##Installation##
