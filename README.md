@@ -46,11 +46,13 @@ Slum CMS uses several external libraries, so as to function without reinventing 
 
 ###PHP Libraries###
 [Simple HTML DOM Parser](http://simplehtmldom.sourceforge.net/), used for parsing the selected pages and finding elements that has the .slum class.
+
 [NiceJSON-PHP](https://github.com/GerHobbelt/nicejson-php), used for outputting the JSON files in a pretty, readable format on older versions of PHP.
+
 [Tidier*](http://www.phpbuilder.com/snippet/detail.php?type=snippet&id=1348), used for outputting HTML in a pretty, readable format. (Does not have an official name, I just call it tidier in this project.)
 
 ###JavaScript Libraries###
-[nicEdit](http://www.nicedit.com), is an easy to implement WYSIWYG-editor.
+[NicEdit](http://www.nicedit.com), is an easy to implement WYSIWYG-editor.
 
 ###License###
 Use Slum CMS as you like, just do **not** redistribute or sell it to anyone. Link them here.
