@@ -6,6 +6,7 @@ Slum CMS is a Simple, Unbulky*, Lightweight, Minimalistic Content Management Sys
 
 ##Table of Contents##
 - [Installation](#installation)
+- [Initial Configuration](#initial-configuration)
 - [Usage](#usage)
 - [Configuring Slum](#configuring-slum)
 - [Uploading Images](#uploading-images)
@@ -61,6 +62,9 @@ Slum CMS uses several external libraries, so as to function without reinventing 
 
 ###JavaScript Libraries###
 [NicEdit](http://www.nicedit.com), is an easy to implement WYSIWYG-editor.
+
+###CSS Libraries###
+[Bootstrap](http://getbootstrap.com), is a nice "library", that makes it easy to achieve a simple, responsive layout.
 
 ###License###
 Copyright (c) 2014 Simon Klit. Released under the [MIT License](https://github.com/simonklit/slum-cms/blob/master/LICENSE.md)
