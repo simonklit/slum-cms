@@ -4,6 +4,17 @@ Slum CMS is a Simple, Unbulky*, Lightweight, Minimalistic Content Management Sys
 
 *: Unbulky is relative - configuration as of 0.1 might be a bit bulky.
 
+##Table of Contents##
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuring Slum](#configuring-slum)
+- [Uploading Images](#uploading-images)
+- [Screenshots](#screenshots)
+- [External Libraries](#external-libraries)
+    - [PHP Libraries](#php-libraries)
+    - [JavaScript Libraries](#javascript-libraries)
+- [License](#license)
+
 ##Installation##
 
  1. Download the Slum CMS source, and place it in a folder anywhere on your server. Could be "slum" at the webroot, but that is optional.
