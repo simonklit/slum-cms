@@ -26,9 +26,6 @@ In Slum CMS:
  2. Add the desired name of the page.
  3. In the path textfield, type in the path to the page you want to edit. This goes from the serverroot (webroot), of your server. So, if the page pizza.html is located in the folder Pages on the root of your server, it would be pages/pizza.html that you put in the path field.
 
-##Known Bugs##
-Slum does not notify you if a page has been succesfully updated, it simply leaves you with a blank bage and a "Go back" link. This will be fixed in the next update.
-
 ##Configuring Slum##
 It is possible to change a lot of things in regards to Slum CMS, and that can be done in the config.php file. All of the possible configurations are commented, with descriptions of what it does, and what it can be changed to.
 
