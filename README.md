@@ -55,7 +55,7 @@ Slum CMS uses several external libraries, so as to function without reinventing 
 [NicEdit](http://www.nicedit.com), is an easy to implement WYSIWYG-editor.
 
 ###License###
-Use Slum CMS as you like, just do **not** redistribute or sell it to anyone. Link them here.
+Copyright (c) 2014 Simon Klit. Released under the [MIT License](https://github.com/simonklit/slum-cms/blob/master/LICENSE.md)
 
 [1]: http://i.imgur.com/95Iclptl.png
 [2]: http://i.imgur.com/57KTLHD.png
