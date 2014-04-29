@@ -34,11 +34,31 @@
 <h4>
 <a name="ver-012" class="anchor" href="#ver-012"><span class="octicon octicon-link"></span></a>ver 0.1.2</h4>
 
-<p>Slum CMS is a Simple, Unbulky*, Lightweight, Minimalistic Content Management System, that runs in PHP and without any connection to a database.</p>
+<p>Slum CMS is a Simple, Lightweight, Unbulky*, Minimalistic Content Management System, that runs in PHP and without any connection to a database.</p>
 
 <p>*: Unbulky is relative - configuration as of 0.1 might be a bit bulky.</p>
 
 <h2>
+<a name="table-of-contents" class="anchor" href="#table-of-contents"><span class="octicon octicon-link"></span></a>Table of Contents</h2>
+
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#initial-configuration">Initial Configuration</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#configuring-slum">Configuring Slum</a></li>
+<li><a href="#uploading-images">Uploading Images</a></li>
+<li><a href="#screenshots">Screenshots</a></li>
+<li>
+<a href="#external-libraries">External Libraries</a>
+
+<ul>
+<li><a href="#php-libraries">PHP Libraries</a></li>
+<li><a href="#javascript-libraries">JavaScript Libraries</a></li>
+<li><a href="#css-libraries">CSS Libraries</a></li>
+</ul>
+</li>
+<li><a href="#license">License</a></li>
+</ul><h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <ol>
@@ -47,7 +67,10 @@
 <a name="initial-configuration" class="anchor" href="#initial-configuration"><span class="octicon octicon-link"></span></a>Initial Configuration</h2>
 
 <ol>
-<li>Go to the db/users.json file, and change the username as you see please. The password in the md5-hash is "1234". As of current release, it is not possible to change user information, so you have to delete the user and create a new one, and then manually grant it "root" privileges (by adding "priv": "root"), if you want to change the password - which you do want to.</li>
+<li>Login by going (with your browser) to the directory in which you have placed Slum CMS, and using the following login information: Username: <em>rootuser</em> Password: <em>1234</em>.</li>
+<li>Click "Manage Users"</li>
+<li>Add a new user with the desired information</li>
+<li>Go to the db/users.json file, and add "priv": "root" to the newly created user. It is important that you add a comma after the password line. Make it look identical (except for actual username and password) to the entry above, the one with rootuser.</li>
 <li>Move the users.json file to a newly created directory, and rename it. Change the information accordingly in the "config.php" file. (This is <strong>important</strong> for security reasons)</li>
 </ol><h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
@@ -58,7 +81,7 @@
 <li>Add the class "slum" to the elements on your pages that you want Slum CMS to edit.</li>
 <li>Add the attribute slumtitle="" if you want to add a title to the elements. This makes them easier to identify when changing them in Slum.</li>
 <li>
-<em>Optional:</em> Add textarea="plain", if you do not want this element to be rendered in a WYSIWYG editor. Recommended for elements like  and so.</li>
+<em>Optional:</em> Add textarea="plain", if you do not want this element to be rendered in a WYSIWYG editor. Recommended for elements like title and so.</li>
 </ol><p>In Slum CMS:</p>
 
 <ol>
@@ -106,6 +129,11 @@
 <a name="javascript-libraries" class="anchor" href="#javascript-libraries"><span class="octicon octicon-link"></span></a>JavaScript Libraries</h3>
 
 <p><a href="http://www.nicedit.com">NicEdit</a>, is an easy to implement WYSIWYG-editor.</p>
+
+<h3>
+<a name="css-libraries" class="anchor" href="#css-libraries"><span class="octicon octicon-link"></span></a>CSS Libraries</h3>
+
+<p><a href="http://getbootstrap.com">Bootstrap</a>, is a nice "library", that makes it easy to achieve a simple, responsive layout.</p>
 
 <h3>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
