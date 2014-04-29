@@ -5,10 +5,11 @@ Slum CMS is a Simple, Lightweight, Unbulky*, Minimalistic Content Management Sys
 *: Unbulky is relative - configuration as of 0.1 might be a bit bulky.
 
 ##Table of Contents##
-- [Installation](#installation)
-- [Initial Configuration](#initial-configuration)
+- [Installation and Configuration](#installation-and-configuration)
+    - [Installation](#installation)
+    - [Initial Configuration](#initial-configuration)
+    - [Configuring Slum](#configuring-slum)
 - [Usage](#usage)
-- [Configuring Slum](#configuring-slum)
 - [Uploading Images](#uploading-images)
 - [Screenshots](#screenshots)
 - [External Libraries](#external-libraries)
@@ -17,36 +18,38 @@ Slum CMS is a Simple, Lightweight, Unbulky*, Minimalistic Content Management Sys
     - [CSS Libraries](#css-libraries)
 - [License](#license)
 
-##Installation##
+##Installation and Configuration##
 
- 1. Download the Slum CMS source, and place it in a folder anywhere on your server. Could be "slum" at the webroot, but that is optional.
+###Installation###
+Simply download the Slum CMS source, extract it and place it in a folder anywhere on your server. Could be "slum" at the webroot, but that is up to you.
 
-##Initial Configuration##
- 1. Login by going (with your browser) to the directory in which you have placed Slum CMS, and using the following login information: Username: *rootuser* Password: *1234*.
+###Initial Configuration###
+ 1. Login by going (with your browser) to the directory in which you have placed Slum CMS, and using the following login information: Username: **rootuser** Password: **1234**.
  2. Click "Manage Users"
- 3. Add a new user with the desired information
+ 3. Add a new user with the desired information.
  4. Go to the db/users.json file, and add "priv": "root" to the newly created user. It is important that you add a comma after the password line. Make it look identical (except for actual username and password) to the entry above, the one with rootuser.
- 5. Move the users.json file to a newly created directory, and rename it. Change the information accordingly in the "config.php" file. (This is **important** for security reasons)
+ 5. (Optional, but **highly** recommended) Move the users.json file to a newly created directory, and rename it. Change the information accordingly in the "config.php" file.
+ 6. (Optional, but **highly** recommended) Delete the rootuser account on the "Manage Users" page.
+
+###Configuring Slum###
+It is possible to change a lot of things in regards to how Slum CMS works, and that can be done in the config.php file. All of the possible configurations are commented, with descriptions of what it does, and what it can be changed to.
 
 ##Usage##
 
 In the HTML of the pages:
 
  1. Add the class "slum" to the elements on your pages that you want Slum CMS to edit.
- 2. Add the attribute slumtitle="" if you want to add a title to the elements. This makes them easier to identify when changing them in Slum.
- 3. *Optional:* Add textarea="plain", if you do not want this element to be rendered in a WYSIWYG editor. Recommended for elements like title and so.
+ 2. (Optional) Add the attribute slumtitle="" if you want to add a title to the elements. This makes them easier to identify when changing them in Slum.
+ 3. (Optional) Add textarea="plain", if you do not want this element to be rendered in a WYSIWYG editor. Recommended for elements like title and so.
 
 In Slum CMS:
 
  1. Log in as a user with root privileges to manage pages. Click "Manage Pages".
  2. Add the desired name of the page.
- 3. In the path textfield, type in the path to the page you want to edit. This goes from the serverroot (webroot), of your server. So, if the page pizza.html is located in the folder Pages on the root of your server, it would be pages/pizza.html that you put in the path field.
-
-##Configuring Slum##
-It is possible to change a lot of things in regards to Slum CMS, and that can be done in the config.php file. All of the possible configurations are commented, with descriptions of what it does, and what it can be changed to.
+ 3. In the path textfield, type in the path to the page you want to edit. This goes from the serverroot (webroot), of your server. So, if the page "pizza.html" is located in the folder "pages" on the root of your server, it would be "pages/pizza.html" that you put in the path field. (Of course without the quotation marks)
 
 ##Uploading Images##
-Slum CMS does **not** upload images to the server it is located on. This is a planned feature. It is although possible to add images in the WYSIWYG editor, but they're uploaded to imgur, and not the server Slum is on.
+Slum CMS does **not** upload images to the server it is located on. The WYSIWYG editor uploads the images to imgur instead (This is due to it being the default option in nicEditor - but uploading to the same server as Slum is on is a planned feature).
 
 ##Screenshots##
 ###Dashboard for root user###
