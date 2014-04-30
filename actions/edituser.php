@@ -51,8 +51,8 @@
 						}
 					//If privilege is set to root
 					}elseif ($_POST['privileges'] == "root") {
-						if ($input[$id][priv] !== "root") {
-							array_push($input, Array(priv => $_POST['privileges']));
+						if (!isset($input[$id][priv])) {
+							$input[$id][priv] = "root";
 						}
 					}
 					//Use custom database write function to write information to the dbusers file

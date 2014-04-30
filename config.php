@@ -14,7 +14,8 @@ $wysiwygbuttonconfig = "'bold','italic','underline','strikethrough','left','cent
 
 /* Switches
 ================== */
-$showpath = "false"; //Show path to the page underneath its name
+$showpath = false; //Show path to the page underneath its name
+$showversion = true; //Show version number on index page
 
 //Less important configurations
 $triggertitle = "slumtitle"; //Change the attributename for defining titles (e.g. slumtitle="First column", where slumtitle is triggertitle)
@@ -22,7 +23,7 @@ $triggertextarea = "textarea"; //Textarea defining attribute for HTML elements (
 $rootpath = $_SERVER['DOCUMENT_ROOT'] . "/"; //Makes all page URLS from webroot instead of relative to the Slum directory
 $dbpages = "db/pages.json"; //Path to the database file containing information regarding pages
 $dbusers = "db/users.php"; //Path to database file containing information regarding users -- is protected (notice .php extension, if you change it's location or name)
-
+$version = "0.2.1"; //Version number of current release
 
 /* Promotional-based configuration
 (Change this if you don't want it to say Slum CMS all over.)

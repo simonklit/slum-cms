@@ -6,7 +6,8 @@
 </head>
 <body>
 <div class="col-lg-12">
-<h2><?php echo $bothnames ?></h2>
+<h2><?php echo $shortname ?>  <?php if ($showversion == true) { echo '<span class="h5">ver. ' . $version .'</span>'; } ?>
+</h2>
 <?php
 if($_SESSION['loggedin'] == "y") {
 	echo "<div class='col-lg-12'><span class='h2'>Pages</span>";
