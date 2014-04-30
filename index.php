@@ -22,14 +22,14 @@ if($_SESSION['loggedin'] == "y") {
 		if ($showpath == "true") {
 		echo "Path: " . $value[path] . "<br>";
 		}
-		echo '<a href="cms.php?page='. $value[path] . '">Edit page</a></div></div>';
+		echo '<a href="action.php?action=cms&page='. $value[path] . '">Edit page</a></div></div>';
 	}
 
 	//If a root-user is logged in, display information regarding users, and link to add a new user
 	if ($_SESSION['root'] == "y") {
 		echo "<div class='col-lg-12'><span class='h2'>Users</span>";
 		echo '<a class="btn adduser" href="action.php?action=manageusers">Manage users</a></div>';
-		$input = json_decode(file_get_contents($dbusers), true);
+		$input = db_read($dbusers);
 		foreach ($input as $value){
 			echo "<div class='col-lg-3'><div class='well well-lg'>";
 			$i++;

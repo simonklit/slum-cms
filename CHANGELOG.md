@@ -1,3 +1,9 @@
+##ver. 0.2##
+* Added proper security to the file containing user information - using headers to prevent access outside script
+* Added possibility to edit user and page information
+* Added possibility to add privileges to user during user creation
+* Exploded the action.php file into multiple files for each different action, being included from the action.php file; increase in speed
+
 ###ver. 0.1.2###
 * Fixed the position of completion messages
 * Added a completion message to when pages get edited succesfully

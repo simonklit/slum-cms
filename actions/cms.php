@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-<?php include('includes/core.php'); ?>
-<title><?php echo $shortname ?></title>
-
-<!-- Include head file -->
-<?php include('includes/head.php'); ?>
-
-<!-- Include nicEdit WYSIWYG editor -->
-<script src="resources/nicedit/nicEdit.js" type="text/javascript"></script>
-
-</head>
-<body>
 <?php
-//Start session so that we can store data to session
-session_start();
 
-//Import requirements and core
 include('resources/reqs.php');
-?>
-
-<div class="col-lg-12"><br>
-<span class="h2"><?php echo $shortname ?></span>
-<a class="btn adduser" href="index.php">Go back</a>
-
-<?php
 /* Blank slate
 ================== */
 if ($_SESSION['loggedin'] == "y") {
@@ -126,6 +102,9 @@ if ($_SESSION['loggedin'] == "y") {
 
 ?>
 
+<!-- Include nicEdit WYSIWYG editor -->
+<script src="resources/nicedit/nicEdit.js" type="text/javascript"></script>
+
 <!-- Turn selected textarea(s) to WYSIWYG -->
 <script type="text/javascript">bkLib.onDomLoaded(function() {
 	var id = 0;
@@ -138,5 +117,3 @@ Array.prototype.forEach.call(elements, function(el, i){
 });
 });</script>
 </div>
-</body>
-</html>
