@@ -1,4 +1,4 @@
-##ver. 0.2.1##
+###ver. 0.2.1###
 * Bugfix: When changing privilege from standard to root, Slum would generate a new user with no information beside "privilege: root". That is fixed now.
 * Does not say the full name on the index - or anywhere in the system.
 * Added version number on index, can be disabled in config.php
