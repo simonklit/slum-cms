@@ -1,6 +1,6 @@
 <?php
 
-include('resources/reqs.php');
+include('includes/reqs.php');
 /* Blank slate
 ================== */
 if ($_SESSION['loggedin'] == "y") {
@@ -138,7 +138,7 @@ if ($_SESSION['loggedin'] == "y") {
 ?>
 
 <!-- Include nicEdit WYSIWYG editor -->
-<script src="resources/nicedit/nicEdit.js" type="text/javascript"></script>
+<script src="includes/nicedit/nicEdit.js" type="text/javascript"></script>
 
 
 

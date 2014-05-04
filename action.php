@@ -14,7 +14,7 @@
 session_start();
 
 //Import minreqs
-include('resources/minreqs.php');
+include('includes/minreqs.php');
 ?>
 
 <!-- Add universal header and button to go back -->

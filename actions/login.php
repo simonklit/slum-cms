@@ -2,7 +2,7 @@
 	//If password and username has been set
 	if(isset($_POST['username'],$_POST['password'])) {
 		//Include minreqs
-		include('resources/minreqs.php');
+		include('includes/minreqs.php');
 		//set information in variables, md5'ing the password
 		$password = md5($_POST['password']);
 		$username = $_POST['username'];
