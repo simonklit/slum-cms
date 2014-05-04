@@ -11,7 +11,7 @@
 <?php
 if($_SESSION['loggedin'] == "y") {
 	echo "<div class='col-lg-12'><span class='h2'>Pages</span>";
-	if ($_SESSION['root'] == "y") { echo '<a class="btn adduser" href="action.php?action=managepages">Manage pages</a><a class="btn adduser" href="action.php?action=logout">Log out</a></div>'; }else{ echo '<a class="btn adduser" href="action.php?action=logout">Log out</a></div>'; }
+	if ($_SESSION['root'] == "y") { echo '<a class="btn adduser" href="action.php?action=managepages">Manage pages</a><a class="btn adduser" href="action.php?action=logout">Log out</a></div>'; }else{ echo '<a class="btn adduser" href="action.php?action=editpassword">Change password</a><a class="btn adduser" href="action.php?action=logout">Log out</a></div>'; }
 	include('resources/minreqs.php');
 
 	$input = json_decode(file_get_contents($dbpages), true);

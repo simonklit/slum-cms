@@ -1,5 +1,5 @@
 #Slum CMS#
-####ver 0.2.1####
+####ver 0.3####
 Slum CMS is a Simple, Lightweight, Unbulky, Minimalistic Content Management System, that runs in PHP and without any connection to a database.
 
 ##Table of Contents##
@@ -8,7 +8,7 @@ Slum CMS is a Simple, Lightweight, Unbulky, Minimalistic Content Management Syst
     - [Initial Configuration](#initial-configuration)
     - [Configuring Slum](#configuring-slum)
 - [Usage](#usage)
-- [Uploading Images](#uploading-images)
+		- [Uploading Images](#uploading-images)
 - [Screenshots](#screenshots)
 - [External Libraries](#external-libraries)
     - [PHP Libraries](#php-libraries)
@@ -43,8 +43,12 @@ In Slum CMS:
  2. Add the desired name of the page.
  3. In the path textfield, type in the path to the page you want to edit. This goes from the serverroot (webroot), of your server. So, if the page "pizza.html" is located in the folder "pages" on the root of your server, it would be "pages/pizza.html" that you put in the path field. (Of course without the quotation marks)
 
-##Uploading Images##
-Slum CMS does **not** upload images to the server it is located on. The WYSIWYG editor uploads the images to imgur instead (This is due to it being the default option in nicEditor - but uploading to the same server as Slum is on is a planned feature).
+###Uploading Images###
+Slum CMS uploads images to the uploadpath that is defined in the config.php file. Add the "slum" class to any img element on your page, and Slum shows it when editing the page, and gives an option for uploading a new image in its place. Slum does *not* change the styles of the image, only the src.
+
+Please note that images have to be from the webroot and up. No relative source. If you do add a relative source, Slum will most likely not be able to display it when the page is being edited. (Slum can change it even if it has a relative path - but can not delete the old file after new upload).
+
+The possibility to add new images directly in the WYSIWYG editor is a planned feature.
 
 ##Screenshots##
 ###Dashboard for root user###

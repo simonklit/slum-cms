@@ -19,6 +19,7 @@
 	    	if (in_array($password, $input[$id])) {
 	    		//Set session to loggedin
 	    		$_SESSION['loggedin'] = "y";
+	    		$_SESSION['username'] = $username;
 	    		//If the priv value is set to root, mark user as root privileged
 	    		if ($value[priv] == "root") {
 	    			$_SESSION['root'] = "y";

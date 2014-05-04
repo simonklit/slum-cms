@@ -17,11 +17,17 @@ if ($_SESSION['loggedin'] == "y") {
 	$elements = array();
 	$textarea = array();
 	$titles = array();
+	$images = array();
 
 	//Treat information for all found elements with triggerclass and push to arrays
 	foreach($html->find('.' . $triggerclass) as $cms) {
 		//Push innertext of each element with the triggerclass to elements array
-		array_push($elements, $cms->innertext);
+		if ($cms->tag === "img"){
+			array_push($elements, "image");
+			$images[$id] = $cms->src;
+		}else{
+			array_push($elements, $cms->innertext);
+		}
 
 		//If the triggertitle attribute isn't empty, push it to titles array
 		if ($cms->$triggertitle !== ""){
@@ -51,12 +57,16 @@ if ($_SESSION['loggedin'] == "y") {
 	  		array_push($textarea, $cms->$triggertextarea);
 	  	}
   	}
+  	$id++;
 	}
+
+	//Reset id
+	$id = 0;
 
 	//If page is not sent along as a post (no information is changed yet)
 	if (!isset($_POST['page'])) { ?>
 
-		<form action="" method="post">
+		<form action="" method="post" enctype="multipart/form-data">
 		<!-- Create hidden input field with page url -->
 		<input type="hidden" value="<?php echo $page ?>" name="page" id="page">
 		<?php
@@ -65,6 +75,13 @@ if ($_SESSION['loggedin'] == "y") {
 			$id++;
 			//If textarea attribute for corresponding element is not set or set to wysiwyg, echo HTML accordingly and +1 wysid
 			echo "<div class='col-lg-12'><h3>" . $titles[$id-1] . "</h3>";
+			//If element is image
+			if ($element === "image") {
+				//Create img element with path to image as src
+				echo "<img width='450' src='" . $images[$id-1] . "'>";
+				//Create elements for uploading new image
+				echo "<br>Upload new image:<br><input type='file' name='elementid[" . $id . "]'></div>";
+			}else{
 			if ($textarea[$id-1] == $triggerwysiwyg) {
 				$wysid++;
 				echo "<textarea class='editarea wys' id='niceditor". $wysid. "' name='elementid[" . $id . "]'>" . $element . "</textarea><br></div>";
@@ -73,6 +90,7 @@ if ($_SESSION['loggedin'] == "y") {
 				echo "<textarea class='editarea' name='elementid[" . $id . "]'>" . $element . "</textarea><br></div>";
 			}
 		}
+		}
 		?>
 		<div class='col-lg-12'><input class="btn btn-primary editsubmit" type="submit"></div>
 		<?php
@@ -80,13 +98,30 @@ if ($_SESSION['loggedin'] == "y") {
 	/* Information is sent
 	================== */
 	}else{
+		$id = 0;
+
 		//Get page url and load contents - from hidden input field
 		$html = file_get_html($_POST['page']);
 
 		//For each element with triggerclass, set information to the new submitted information by +1 id
 		foreach($html->find('.' . $triggerclass) as $cms) {
 			$id++;
-			$cms->innertext = $_POST['elementid'][$id];
+			//If element is image
+			if ($cms->tag === "img"){
+				//If the deletion of old files on new ones uploaded is enabled
+				if ($deleteoldupload === true) {
+				unlink($rootpath . substr($cms->src, 1));
+				}
+				//Move uploaded file from tmp to perm directory
+				move_uploaded_file ($_FILES['elementid']['tmp_name'][$id], 
+       "" . $rootpath . $uploadpath . $_FILES['elementid']['name'][$id] . "");
+				//Set new directory to element on page
+				$cms->src = "/" . $uploadpath . $_FILES['elementid']['name'][$id];
+				//If is not image
+			}else{
+				//Change information in element
+				$cms->innertext = $_POST['elementid'][$id];
+			}
 		}
 
 		//Tidy up final HTML
@@ -104,6 +139,8 @@ if ($_SESSION['loggedin'] == "y") {
 
 <!-- Include nicEdit WYSIWYG editor -->
 <script src="resources/nicedit/nicEdit.js" type="text/javascript"></script>
+
+
 
 <!-- Turn selected textarea(s) to WYSIWYG -->
 <script type="text/javascript">bkLib.onDomLoaded(function() {

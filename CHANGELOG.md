@@ -1,3 +1,8 @@
+##ver. 0.3##
+* Added image upload - add the slum class to any img element on your page and Slum handles it with the upload tool. The src **has** to be from the webroot and up. Slum gets confused in the displaying of the image otherwise.
+* Standard privileged users can now change their own password.
+* Removed the import of bootstrap.js, as it was not being used.
+
 ###ver. 0.2.1###
 * Bugfix: When changing privilege from standard to root, Slum would generate a new user with no information beside "privilege: root". That is fixed now.
 * Does not say the full name on the index - or anywhere in the system.

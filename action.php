@@ -28,6 +28,9 @@ if ($_SESSION['loggedin'] == "y") {
 	if ($_GET['action'] == "cms") {
 		include('actions/cms.php');
 	}
+	if ($_GET['action'] == "editpassword") {
+		include('actions/editpassword.php');
+	}
 	//If user is logged in as root
 	if ($_SESSION['root'] == "y") {
 		//If the action called is managepages (the $_POST will be passed by a form on this page when information has been changed or supplied)

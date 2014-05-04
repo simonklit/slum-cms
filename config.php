@@ -5,14 +5,19 @@
 ================== */
 $triggerclass = "slum"; //Class that makes elements editable by Slum
 
+/* Uploads
+================== */
+$uploadpath = "img/"; //Path from webroot that images should be uploaded to - do not prepend a /. But do append.
+$deleteoldupload = true; //Delete old file when new one is uploaded in its place
+
 /* Text-area
 ================== */
 $triggerplaintext = "plain"; //Keyword to set textarea to plaintext
 $triggerwysiwyg = "wysiwyg"; //Keyword to set textarea to WYSIWYG (is default setting)
 $defaulttextarea = "wysiwyg"; //Default textarea type - set to "plain" for plaintext textarea
-$wysiwygbuttonconfig = "'bold','italic','underline','strikethrough','left','center','right','justify','ol','ul','fontSize','fontFormat','indent','outdent','image','upload','xhtml'"; //Change which buttons appear on the wysiwyg editors (all available options can be found here: http://wiki.nicedit.com/w/page/515/Configuration%20Options)
+$wysiwygbuttonconfig = "'bold','italic','underline','strikethrough','left','center','right','justify','ol','ul','fontSize','fontFormat','indent','outdent','xhtml'"; //Change which buttons appear on the wysiwyg editors (all available options can be found here: http://wiki.nicedit.com/w/page/515/Configuration%20Options)
 
-/* Switches
+/* Show switches
 ================== */
 $showpath = false; //Show path to the page underneath its name
 $showversion = true; //Show version number on index page
@@ -23,7 +28,7 @@ $triggertextarea = "textarea"; //Textarea defining attribute for HTML elements (
 $rootpath = $_SERVER['DOCUMENT_ROOT'] . "/"; //Makes all page URLS from webroot instead of relative to the Slum directory
 $dbpages = "db/pages.json"; //Path to the database file containing information regarding pages
 $dbusers = "db/users.php"; //Path to database file containing information regarding users -- is protected (notice .php extension, if you change it's location or name)
-$version = "0.2.1"; //Version number of current release
+$version = "0.3"; //Version number of current release
 
 /* Promotional-based configuration
 (Change this if you don't want it to say Slum CMS all over.)
