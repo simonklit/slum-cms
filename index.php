@@ -9,13 +9,14 @@
 <h2><?php echo $shortname ?>  <?php if ($showversion == true) { echo '<span class="h5">ver. ' . $version .'</span>'; } ?>
 </h2>
 <?php
+
 if($_SESSION['loggedin'] == "y") {
-	echo "<div class='col-lg-12'><span class='h2'>Pages</span>";
+	echo "<div class='col-lg-12'>" . $_SESSION['updatemessage'];
+	echo "<span class='h2'>Pages</span>";
 	if ($_SESSION['root'] == "y") { echo '<a class="btn adduser" href="action.php?action=managepages">Manage pages</a><a class="btn adduser" href="action.php?action=logout">Log out</a></div>'; }else{ echo '<a class="btn adduser" href="action.php?action=editpassword">Change password</a><a class="btn adduser" href="action.php?action=logout">Log out</a></div>'; }
 	include('includes/minreqs.php');
 
 	$input = json_decode(file_get_contents($dbpages), true);
-
 	foreach ($input as $value){
 		echo "<div class='col-lg-3'><div class='well well-lg'>";
 		$i++;

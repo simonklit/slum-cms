@@ -1,3 +1,6 @@
+###ver. 0.3.1###
+* Added version check - lets you know if a new version is available.
+
 ##ver. 0.3##
 * Added image upload - add the slum class to any img element on your page and Slum handles it with the upload tool. The src **has** to be from the webroot and up. Slum gets confused in the displaying of the image otherwise.
 * Standard privileged users can now change their own password.

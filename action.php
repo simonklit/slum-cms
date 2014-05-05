@@ -1,3 +1,5 @@
+<?php //Start session so that we can store data to session
+session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +12,6 @@
 </head>
 <body>
 <?php
-//Start session so that we can store data to session
-session_start();
 
 //Import minreqs
 include('includes/minreqs.php');

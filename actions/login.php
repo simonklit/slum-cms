@@ -23,14 +23,15 @@
 	    		//If the priv value is set to root, mark user as root privileged
 	    		if ($value[priv] == "root") {
 	    			$_SESSION['root'] = "y";
+	       		if ($checkversion == true) { checkversion(); }
 	    		}
 	    		//Redirect to index when script is complete
 					echo "<script>window.location = 'index.php'</script>";
 	    	}else {
-	    		echo "Password was incorrect.";
+	    		echo "<br>Password was incorrect.";
 	    	}
 		}else{
-			echo "Username was incorrect.";
+			echo "<br>Username was incorrect.";
 		}
 		$id++;
 		}
