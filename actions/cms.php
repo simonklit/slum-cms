@@ -109,6 +109,7 @@ if ($_SESSION['loggedin'] == "y") {
 			//If element is image
 			if ($cms->tag === "img"){
 				//If the deletion of old files on new ones uploaded is enabled
+				if (file_exists($_FILES['elementid']['tmp_name'][$id])) {
 				if ($deleteoldupload === true) {
 				unlink($rootpath . substr($cms->src, 1));
 				}
@@ -118,6 +119,7 @@ if ($_SESSION['loggedin'] == "y") {
 				//Set new directory to element on page
 				$cms->src = "/" . $uploadpath . $_FILES['elementid']['name'][$id];
 				//If is not image
+				}
 			}else{
 				//Change information in element
 				$cms->innertext = $_POST['elementid'][$id];

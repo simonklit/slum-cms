@@ -1,3 +1,6 @@
+###Ver. 0.3.2###
+* Fixed a bug that would delete images even if new ones were not uploaded in its place.
+
 ###ver. 0.3.1###
 * Added version check - lets you know if a new version is available.
 
