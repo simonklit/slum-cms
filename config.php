@@ -29,7 +29,7 @@ $triggertextarea = "textarea"; //Textarea defining attribute for HTML elements (
 $rootpath = $_SERVER['DOCUMENT_ROOT'] . "/"; //Makes all page URLS from webroot instead of relative to the Slum directory
 $dbpages = "db/pages.json"; //Path to the database file containing information regarding pages
 $dbusers = "db/users.php"; //Path to database file containing information regarding users -- is protected (notice .php extension, if you change it's location or name)
-$version = "0.3.2"; //Version number of current release
+$version = "0.3.3"; //Version number of current release
 
 /* Promotional-based configuration
 (Change this if you don't want it to say Slum CMS all over.)

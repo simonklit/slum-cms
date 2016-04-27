@@ -21,7 +21,7 @@
 	    		$_SESSION['loggedin'] = "y";
 	    		$_SESSION['username'] = $username;
 	    		//If the priv value is set to root, mark user as root privileged
-	    		if ($value[priv] == "root") {
+	    		if ($value["priv"] == "root") {
 	    			$_SESSION['root'] = "y";
 	       		if ($checkversion == true) { checkversion(); }
 	    		}

@@ -14,7 +14,7 @@
 					<input type="hidden" value="<?php echo $id ?>" name="id">
 						  <div class="form-group">
 						    <label class="sr-only" for="name">Username</label>
-						    <input type="text" class="form-control" name="username" id="username" value="<?php echo $input[$id][username]; ?>">
+						    <input type="text" class="form-control" name="username" id="username" value="<?php echo $input[$id]["username"]; ?>">
 						  </div>
 						  <div class="form-group">
 						    <label class="sr-only" for="path">Password</label>
@@ -39,20 +39,20 @@
 } else {
 					$id = $_POST['id'];
 					//Set information in variables
-					$input[$id][username] = $_POST['username'];
+					$input[$id]["username"] = $_POST['username'];
 					if ($_POST['password'] !== "") {
-						$input[$id][password] = md5($_POST['password']);
+						$input[$id]["password"] = md5($_POST['password']);
 					}
 
 					//If privilege is set to standard
 					if ($_POST['privileges'] == "standard") {
-						if($input[$id][priv] !== "") {
-							unset($input[$id][priv]);
+						if($input[$id]["priv"] !== "") {
+							unset($input[$id]["priv"]);
 						}
 					//If privilege is set to root
 					}elseif ($_POST['privileges'] == "root") {
-						if (!isset($input[$id][priv])) {
-							$input[$id][priv] = "root";
+						if (!isset($input[$id]["priv"])) {
+							$input[$id]["priv"] = "root";
 						}
 					}
 					//Use custom database write function to write information to the dbusers file

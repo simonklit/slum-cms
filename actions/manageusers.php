@@ -29,11 +29,12 @@
 					//Get users from dbusers json file
 					$input = db_read($dbusers);
 					//Iterate through each user, displaying in well with delete option
+					$i = 0;
 					foreach ($input as $value){
 						echo "<div class='col-lg-3'><div class='well well-lg'>";
 						$i++;
-						echo "Username: ". $value[username]."<br>";
-						if ($value[priv] == "root") {
+						echo "Username: ". $value["username"]."<br>";
+						if (isset($value["priv"]) && $value['priv'] == "root") {
 							echo "Privilege: root<br>";
 						}else{
 							echo "Privilege: standard<br>";
@@ -57,10 +58,10 @@
 
 					//If privilege is set to standard
 					if ($privilege == "standard") {
-						array_push($input, Array(username => $username, password => $password));
+						array_push($input, Array("username" => $username, "password" => $password));
 					//If privilege is set to root
 					}elseif ($privilege == "root") {
-						array_push($input, Array(username => $username, password => $password, priv => $privilege));
+						array_push($input, Array("username" => $username, "password" => $password, "priv" => $privilege));
 					}
 
 					//Use custom database write function to write information to the dbusers file

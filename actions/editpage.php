@@ -15,11 +15,11 @@
 					<input type="hidden" value="<?php echo $id; ?>" name="id">
 						  <div class="form-group">
 						    <label class="sr-only" for="name">Page name</label>
-						    <input type="text" class="form-control" name="name" id="name" value="<?php echo $input[$id][page] ?>">
+						    <input type="text" class="form-control" name="name" id="name" value="<?php echo $input[$id]["page"] ?>">
 						  </div>
 						  <div class="form-group">
 						    <label class="sr-only" for="path">Page path (from webroot)</label>
-						    <input type="text" class="form-control wide" name="path" id="path" value="<?php echo $input[$id][path] ?>">
+						    <input type="text" class="form-control wide" name="path" id="path" value="<?php echo $input[$id]["path"] ?>">
 						  </div>
 						  <button type="submit" class="btn btn-default">Edit</button>
 					</form>
@@ -27,8 +27,8 @@
 } else {
 					$id = $_POST['id'];
 					//Set information in variables
-					$input[$id][page] = $_POST['name'];
-					$input[$id][path] = $_POST['path'];
+					$input[$id]["page"] = $_POST['name'];
+					$input[$id]["path"] = $_POST['path'];
 
 					//Encode information and place in output variable
 					$output = json_format($input);

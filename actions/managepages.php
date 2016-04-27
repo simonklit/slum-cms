@@ -22,11 +22,12 @@
 					//Get pages from json file
 					$input = json_decode(file_get_contents($dbpages), true);
 					//Iterate over each, displaying a well with delete option for each result
+					$i = 0;
 					foreach ($input as $value) {
 						echo "<div class='col-lg-3'><div class='well well-lg'>";
 						$i++;
-						echo "Page: ". $value[page]. "<br>";
-						echo "Path: " . $value[path] . "<br>";
+						echo "Page: ". $value["page"]. "<br>";
+						echo "Path: " . $value["path"] . "<br>";
 						//Do not echo the delete button if only one entry exists
 						if (count($input) !== 1) {
 							echo "<a class='btn btn-primary btn-xs' href='action.php?action=editpage&id=" . $i . "'>Edit</a> ";
@@ -44,7 +45,7 @@
 					$input = json_decode(file_get_contents($dbpages), true);
 
 					//Push new information to the end of the array decoded from json
-					array_push($input, Array(page => $name, path => $path));
+					array_push($input, Array("page" => $name, "path" => $path));
 
 					//Encode information and place in output variable
 					$output = json_format($input);

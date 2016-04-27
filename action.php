@@ -34,7 +34,7 @@ if ($_SESSION['loggedin'] == "y") {
 	//If user is logged in as root
 	if ($_SESSION['root'] == "y") {
 		//If the action called is managepages (the $_POST will be passed by a form on this page when information has been changed or supplied)
-		if ($_GET['action'] == "managepages" OR $_POST['action'] == "managepages") {
+		if ($_GET['action'] == "managepages") {
 			include('actions/managepages.php');
 		}
 		//If the action called is deletepage 
@@ -46,7 +46,7 @@ if ($_SESSION['loggedin'] == "y") {
 			include('actions/editpage.php');
 		}
 		//If the action called is manageusers (the $_POST will be passed by a form on this page when information has been changed or supplied)
-		if ($_GET['action'] == "manageusers" OR $_POST['action'] == "manageusers") {
+		if ($_GET['action'] == "manageusers") {
 			include('actions/manageusers.php');
 		}
 		//If action called is deleteuser
