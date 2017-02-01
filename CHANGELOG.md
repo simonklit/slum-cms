@@ -2,6 +2,8 @@
 ###Roadmap###
 * Add inline templates (using &lt;slumtemplate&gt;), so that repeated elements with variables can be created in the CMS.
 * Add the "deleteable" attribute to slum elements, allowing the element and all of it's contents to be removed (maybe should be recoverable by simply hiding it with inline styles? Or something to that effect; should be disableable in the config file)
+* Increased password security (new algorithm, salting and so forth.)
+* Initiate function (ran only the first time the system is loaded) creating salt for hashing and so on and so forth.
 
 ###Ver. 0.3.2###
 * Fixed a bug that would delete images even if new ones were not uploaded in its place.
