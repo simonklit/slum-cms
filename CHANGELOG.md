@@ -1,10 +1,15 @@
+
+###Roadmap###
+* Add inline templates (using &lt;slumtemplate&gt;), so that repeated elements with variables can be created in the CMS.
+* Add the "deleteable" attribute to slum elements, allowing the element and all of it's contents to be removed (maybe should be recoverable by simply hiding it with inline styles? Or something to that effect; should be disableable in the config file)
+
 ###Ver. 0.3.2###
 * Fixed a bug that would delete images even if new ones were not uploaded in its place.
 
 ###ver. 0.3.1###
 * Added version check - lets you know if a new version is available.
 
-##ver. 0.3##
+##Ver. 0.3##
 * Added image upload - add the slum class to any img element on your page and Slum handles it with the upload tool. The src **has** to be from the webroot and up. Slum gets confused in the displaying of the image otherwise.
 * Standard privileged users can now change their own password.
 * Removed the import of bootstrap.js, as it was not being used.
