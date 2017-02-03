@@ -58,7 +58,7 @@ Slum CMS supports the use of templates, allowing you to quickly create similar H
 An example of this could be a list, where you want to be able to add list items from within the CMS. Templates makes this possible.
 
 Templates look like this:  
-```
+```html
 <slumtemplate>
     <li slumvar slumtitle="Test var"></li>
 </slumtemplate>
@@ -67,7 +67,7 @@ Templates look like this:
 Templates are inline elements that can be used to generate similar content from within the CMS. In case you want to add an item to a list, use the example above. Simply drop it in like so:
 
 ```
-<ul>
+<ul>html
     <slumtemplate>
         <li slumvar slumtitle="Test var"></li>
     </slumtemplate>
