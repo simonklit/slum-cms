@@ -10,6 +10,7 @@ Slum CMS is a Simple, Lightweight, Unbulky, Minimalistic Content Management Syst
     - [Configuring Slum](#configuring-slum)
 - [Usage](#usage)
     - [Uploading Images](#uploading-images)
+    - [Templates](#templates)
 - [Screenshots](#screenshots)
 - [External Libraries](#external-libraries)
     - [PHP Libraries](#php-libraries)
@@ -59,7 +60,7 @@ An example of this could be a list, where you want to be able to add list items 
 Templates look like this:  
 ```
 <slumtemplate>
-<li slumvar slumtitle="Test var"></li>
+    <li slumvar slumtitle="Test var"></li>
 </slumtemplate>
 ```
 
@@ -67,9 +68,9 @@ Templates are inline elements that can be used to generate similar content from 
 
 ```
 <ul>
-<slumtemplate>
-<li slumvar slumtitle="Test var"></li>
-</slumtemplate>
+    <slumtemplate>
+        <li slumvar slumtitle="Test var"></li>
+    </slumtemplate>
 </ul>
 ```
 And you're good to go.
