@@ -1,6 +1,6 @@
 #Slum CMS#
 
-####ver 0.3.2####
+####ver 0.4####
 Slum CMS is a Simple, Lightweight, Unbulky, Minimalistic Content Management System, that runs in PHP and without any connection to a database.
 
 ##Table of Contents##
