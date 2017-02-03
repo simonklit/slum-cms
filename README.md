@@ -66,8 +66,8 @@ Templates look like this:
 
 Templates are inline elements that can be used to generate similar content from within the CMS. In case you want to add an item to a list, use the example above. Simply drop it in like so:
 
-```
-<ul>html
+```html
+<ul>
     <slumtemplate>
         <li slumvar slumtitle="Test var"></li>
     </slumtemplate>
