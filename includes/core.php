@@ -1,6 +1,9 @@
 <?php
+include('minreqs.php');
 include('config.php');
-
+ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
 function db_read($path) {
 	$open = true;
 	include $path;
@@ -13,6 +16,31 @@ function db_write($path, $array) {
 	$content .= '; }else {echo "Access denied."; header("HTTP/1.1 403 Forbidden"); exit; } ?>';
 	$fp = fopen($path, 'w');
 	fwrite($fp, $content);
+	fclose($fp);
+}
+
+function conf_read()
+{
+	global $dbconf;
+	$ar = file_get_contents($dbconf);
+	return json_decode($ar, true);
+}
+
+function conf_write($array)
+{
+	global $dbconf;
+	$current_confs = conf_read();
+
+	foreach($array as $key => $value)
+	{
+		$current_confs[$key] = $value;
+	}
+	//Encode information and place in output variable
+	$output = json_format($current_confs);
+
+	//Write information to dbpages file
+	$fp = fopen($dbconf, 'w');
+	fwrite($fp, stripslashes($output));
 	fclose($fp);
 }
 

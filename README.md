@@ -37,6 +37,7 @@ In the HTML of the pages:
  1. Add the class "slum" to the elements on your pages that you want Slum CMS to edit.
  2. (Optional) Add the attribute slumtitle="" if you want to add a title to the elements. This makes them easier to identify when changing them in Slum.
  3. (Optional) Add textarea="plain", if you do not want this element to be rendered in a WYSIWYG editor. Recommended for elements like title and so.
+ 4. (Optional) Add deleteable, if you want the element to be deleteable in the CMS.
 
 In Slum CMS:
 
@@ -50,6 +51,34 @@ Slum CMS uploads images to the uploadpath that is defined in the config.php file
 Please note that images have to be from the webroot and up. No relative source. If you do add a relative source, Slum will most likely not be able to display it when the page is being edited. (Slum can change it even if it has a relative path - but can not delete the old file after new upload).
 
 The possibility to add new images directly in the WYSIWYG editor is a planned feature.
+
+###Templates###
+Slum CMS supports the use of templates, allowing you to quickly create similar HTML elements with varying variables.
+An example of this could be a list, where you want to be able to add list items from within the CMS. Templates makes this possible.
+
+Templates look like this:  
+```
+<slumtemplate>
+<li slumvar slumtitle="Test var"></li>
+</slumtemplate>
+```
+
+Templates are inline elements that can be used to generate similar content from within the CMS. In case you want to add an item to a list, use the example above. Simply drop it in like so:
+
+```
+<ul>
+<slumtemplate>
+<li slumvar slumtitle="Test var"></li>
+</slumtemplate>
+</ul>
+```
+And you're good to go.
+
+Of course, you can give the template itself a slumtitle, and all of the vars have their regularly applicable attributes, such as slumtitle, deleteable and so on and so forth.
+
+If you're using templates you have to either include the generated slum.css file, which by default will be located at "/genereated/slum.css". If you don't want to do that, simply copy the contents of the slum.css file to your css file.
+
+*NB:* Editable elements in templates are defined with the attribute "slumvar" and not by giving them the class "slum". If you do give an element within a template the class "slum", the behavior you will receive is not what you would've expected.
 
 ##Screenshots##
 ###Dashboard for root user###

@@ -1,4 +1,4 @@
-<?php session_start(); include('includes/head.php'); include('includes/core.php'); ?>
+<?php session_start(); include('includes/head.php'); include('includes/core.php'); if(conf_read()['init'] == false) { include('actions/init.php'); } ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -33,6 +33,10 @@ if ($_SESSION['loggedin'] == "y") {
 	}
 	//If user is logged in as root
 	if ($_SESSION['root'] == "y") {
+		if ($_GET['action'] == "init")
+		{
+			include('actions/init.php');
+		}
 		//If the action called is managepages (the $_POST will be passed by a form on this page when information has been changed or supplied)
 		if ($_GET['action'] == "managepages") {
 			include('actions/managepages.php');
