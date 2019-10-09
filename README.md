@@ -1,3 +1,5 @@
+# PROEJCT IS DEAD. KEPT ONLINE FOR REFERENCE.
+
 # Slum CMS
 
 #### ver 0.4
@@ -87,23 +89,23 @@ If you're using templates you have to either include the generated slum.css file
 ### Editing a page
 ![Editing page][2]
 
-##External Libraries##
+## External Libraries
 Slum CMS uses several external libraries, so as to function without reinventing the wheel.
 
-###PHP Libraries###
+### PHP Libraries
 [Simple HTML DOM Parser](http://simplehtmldom.sourceforge.net/), used for parsing the selected pages and finding elements that has the .slum class.
 
 [NiceJSON-PHP](https://github.com/GerHobbelt/nicejson-php), used for outputting the JSON files in a pretty, readable format on older versions of PHP.
 
 [Tidier*](http://www.phpbuilder.com/snippet/detail.php?type=snippet&id=1348), used for outputting HTML in a pretty, readable format. (Does not have an official name, I just call it tidier in this project.)
 
-###JavaScript Libraries###
+### JavaScript Libraries
 [NicEdit](http://www.nicedit.com), is an easy to implement WYSIWYG-editor.
 
-###CSS Libraries###
+### CSS Libraries
 [Bootstrap](http://getbootstrap.com), is a nice "library", that makes it easy to achieve a simple, responsive layout.
 
-###License###
+### License
 Copyright (c) 2014 Simon Klit. Released under the [MIT License](https://github.com/simonklit/slum-cms/blob/master/LICENSE.md)
 
 [1]: http://i.imgur.com/95Iclptl.png
